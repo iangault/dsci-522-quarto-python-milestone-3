@@ -1,0 +1,13 @@
+services:
+  # run jupyter notebook inside jupyter 
+  jupyter-notebook:
+    image:  ttimbers/dsci-522-individual-assignment-quarto-python:92da461
+    ports:
+      - "8888:8888"
+    volumes:
+      - .:/home/jovyan
+    deploy:
+      resources:
+        limits:
+          memory: 5G
+    platform: linux/amd64
