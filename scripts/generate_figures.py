@@ -35,11 +35,14 @@ def main(input_dir, out_dir):
         x=alt.X('Ref_Date:T', title="Year"),
         y=alt.Y('Value:Q', title="Number of horses")
     ).properties(
-        title='Historical number of horses per province in Canada'
+        title='Historical number of horses per province in Canada',
+        width = 200,
+        height = 200
     ).facet(
         'GEO:N',
         columns=3
-    )
+    ).properties(
+        padding=25)
 
     chart.save(os.path.join(out_dir, 'horse_pops_plot.png'), scale_factor=2.0)
     #save(chart, os.path.join(out_dir, 'horse_pops_plot.png'))
@@ -57,7 +60,10 @@ def main(input_dir, out_dir):
         x=alt.X('Ref_Date:T', title="Year"),
         y=alt.Y('Value:Q', title="Number of horses")
     ).properties(
-        title=f'Historical number of horses in {largest_sd_prov}'
+        title=f'Historical number of horses in {largest_sd_prov}',
+        width=500,
+        height=400,
+        padding=20
     )
 
     chart_largest_sd.save(os.path.join(out_dir, 'horse_pops_plot_largest_sd.png'), scale_factor=2.0)
