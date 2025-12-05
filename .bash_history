@@ -32,3 +32,6 @@ python scripts/generate_figures.py --input_dir="data/00030067-eng.csv"     --out
 python scripts/generate_figures.py --input_dir="data/00030067-eng.csv"     --out_dir="results"
 python scripts/generate_figures.py --input_dir="data/00030067-eng.csv"     --out_dir="results"
 quarto render reports/qmd_example.qmd --to html --embed-resources
+ls
+quarto render
+quarto preview
