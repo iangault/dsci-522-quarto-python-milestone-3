@@ -36,3 +36,4 @@ ls
 quarto render
 quarto preview
 quarto render
+quarto render reports/qmd_example.qmd --to html --embed-resources
